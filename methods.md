@@ -1,4 +1,4 @@
-# Defining Methods
+# Flasher.js
 
 Methods allow you to smoothly display code examples in different languages.
 
