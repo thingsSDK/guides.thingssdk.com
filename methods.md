@@ -1,30 +1,8 @@
 # Flasher.js
 
-Methods allow you to smoothly display code examples in different languages.
+Flasher.js is a cross-platform GUI tool that allows you to install JavaScript run-times on the ESP8266. It runs on macOS, Linux and Windows.
 
-{% method %}
-## My first method
+## Download
 
-My first method exposes how to print a message in JavaScript and Go.
+You can download the [latest release here](https://github.com/thingsSDK/flasher.js/releases).
 
-{% sample lang="js" %}
-Here is how to print a message to `stdout` using JavaScript.
-
-```js
-console.log('My first method');
-```
-
-{% sample lang="go" %}
-Here is how to print a message to `stdout` using Go.
-
-```go
-fmt.Println("My first method")
-```
-
-{% common %}
-Whatever language you are using, the result will be the same.
-
-```bash
-$ My first method
-```
-{% endmethod %}
