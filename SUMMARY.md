@@ -6,4 +6,5 @@
    * [Compatible Devices](flasher.js/compatible_devices.md)
 * [thingsSDK CLI](thingssdk_cli/index.md)
    * [Getting Started](thingssdk_cli/getting_started.md)
+* Examples
 
