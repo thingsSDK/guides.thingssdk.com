@@ -1,9 +1,5 @@
 # Summary
 
-## Overview
-
-* [My Awesome API](README.md)
-
-## Methods
-
+* [Introduction to thingsSDK](README.md)
 * [Defining Methods](methods.md)
+
