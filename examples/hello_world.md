@@ -1,8 +1,8 @@
 # Hello, World!
 
-Every new thingsSDK project starts with a _Hello, World!_ example. The "Hello, World!" of electronics is a blinking LED.
+Every new thingsSDK project starts with a _Hello, World!_ example. The "Hello, World!" of electronics is a blinking LED (light).
 
-Each ESP8266 has a blue LED (light) that's connected to a the `D2` pin.
+Each ESP8266 has a blue LED that's connected to a the `D2` pin. Pins can be programatically triggered. In this example the `digitalWrite` function is called which will eather switch the LED on or off.
 
 ```javascript
 var isOn = false;
