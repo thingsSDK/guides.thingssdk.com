@@ -10,3 +10,9 @@ $ npm install thingsSDK/thingssdk-cli
 
 **TODO: Use correct package name on release!
 **
+
+## Usage
+
+```bash
+$ thingssdk new <project_name>
+```
