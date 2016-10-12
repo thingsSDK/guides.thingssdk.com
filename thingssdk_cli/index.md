@@ -29,7 +29,7 @@ Deploying project to device:
 $ npm run push
 ```
 
-Running a REPL:
+Running a REPL on the connected device:
 
 ```bash
 $ npm run repl
