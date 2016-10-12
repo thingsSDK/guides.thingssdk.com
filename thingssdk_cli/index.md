@@ -16,3 +16,7 @@ $ npm install thingsSDK/thingssdk-cli
 ```bash
 $ thingssdk new <project_name>
 ```
+
+
+## Guides
+
