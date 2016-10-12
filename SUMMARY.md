@@ -7,5 +7,5 @@
 * [thingsSDK CLI](thingssdk_cli/index.md)
    * [Getting Started](thingssdk_cli/getting_started.md)
 * [Examples](examples.md)
-   * [Hello World](hello_world.md)
+   * [Hello World](examples/hello_world.md)
 
