@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction to thingsSDK](README.md)
-* [Flasher.js](methods.md)
+* [Flasher.js](flasher.js/index.md)
    * [Getting Started](flasher.js/getting_started.md)
    * [Compatible Devices](flasher.js/compatible_devices.md)
 * [thingsSDK CLI](thingssdk_cli/index.md)
