@@ -1,3 +1,3 @@
-# My Awesome API
+# Introduction to thingsSDK
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+__thingsSDK__ is a set tools for web developers to create internet-enabled hardware projects. 
