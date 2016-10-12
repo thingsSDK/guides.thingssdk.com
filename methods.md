@@ -7,4 +7,7 @@ Flasher.js is a cross-platform GUI tool that allows you to install (or 'flash') 
 You can download the [latest release here](https://github.com/thingsSDK/flasher.js/releases).
 
 
-
+## Articles
+  
+* [Getting Started](./getting_started.md)
+* [Compatible Devices](./compatible_devices.md)
