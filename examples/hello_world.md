@@ -2,6 +2,8 @@
 
 Every new thingsSDK project starts with a _Hello, World!_ example. The "Hello, World!" of electronics is a blinking LED.
 
+Each ESP8266 has a blue LED (light) that's connected to a the `D2` pin.
+
 ```javascript
 var isOn = false;
 var interval = 500; // 500 milliseconds = 0.5 seconds
