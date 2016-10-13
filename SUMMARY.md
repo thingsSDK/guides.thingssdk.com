@@ -7,6 +7,6 @@
 * [thingsSDK CLI](thingssdk_cli/index.md)
    * [Getting Started](thingssdk_cli/getting_started.md)
 * [Examples](examples/index.md)
-   * [Hello World](examples/hello_world.md)
    * [Using an LED](examples/using_an_led.md)
+   * [Hello World](examples/hello_world.md)
 
