@@ -12,5 +12,5 @@
    * [Using a Button](examples/using_a_button.md)
    * [Using WiFi](examples/using_wifi.md)
    * [Creating a Wireless Access Point](examples/creating_a_wireless_ap.md)
-   * Serving a Webpage
+   * [Serving a Webpage](examples/serving_a_webpage.md)
 
