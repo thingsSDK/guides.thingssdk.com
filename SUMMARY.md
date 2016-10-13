@@ -12,6 +12,6 @@
    * [Using a Button](examples/using_a_button.md)
    * [Using WiFi](examples/using_wifi.md)
    * [Creating a Wireless Access Point](examples/creating_a_wireless_ap.md)
-   * Using an HTTP API
+   * [Using an HTTP API](examples/using_an_http_api.md)
    * [Serving a Webpage](examples/serving_a_webpage.md)
 
