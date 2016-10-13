@@ -11,5 +11,5 @@
    * [Using an LED](examples/using_an_led.md)
    * [Using a Button](examples/using_a_button.md)
    * [Using WiFi](examples/using_wifi.md)
-   * Creating a Wireless Access Point
+   * [Creating a Wireless Access Point](examples/creating_a_wireless_ap.md)
 
