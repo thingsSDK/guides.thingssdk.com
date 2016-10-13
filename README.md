@@ -10,4 +10,4 @@ thingsSDK reduces the friction to start a project by providing tools such as:
 
 ## Example Code
  
-For examples, see the [Example](./exmaples/index.md) page.
+For examples, see the [Example](./examples/index.md) page.
