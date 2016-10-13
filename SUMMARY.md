@@ -9,4 +9,5 @@
 * [Examples](examples/index.md)
    * [Hello World](examples/hello_world.md)
    * [Using an LED](examples/using_an_led.md)
+   * Using a Button
 
