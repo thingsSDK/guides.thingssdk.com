@@ -10,4 +10,5 @@
    * [Hello World](examples/hello_world.md)
    * [Using an LED](examples/using_an_led.md)
    * [Using a Button](examples/using_a_button.md)
+   * Using WiFI
 
