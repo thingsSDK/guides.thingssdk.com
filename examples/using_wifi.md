@@ -1,2 +1,2 @@
-# Using WiFI
+# Using WiFi
 
