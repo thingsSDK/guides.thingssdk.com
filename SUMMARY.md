@@ -8,4 +8,5 @@
    * [Getting Started](thingssdk_cli/getting_started.md)
 * [Examples](examples/index.md)
    * [Hello World](examples/hello_world.md)
+   * Using an LED
 
