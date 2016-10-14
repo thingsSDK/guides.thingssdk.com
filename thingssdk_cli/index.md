@@ -21,15 +21,21 @@ Creating a project:
 $ thingssdk new <project_name>
 ```
 
-Changing in to the project directory you'll have access to the following scripts `push` and `repl`.
+Changing in to the project directory, and install the libraries:
 
-Deploying project to device:
+```
+$ npm install
+```
+
+You'll have access to the following scripts `push` and `repl`.
+
+Deploy your project to device with `push`:
 
 ```bash
 $ npm run push
 ```
 
-Running a REPL on the connected device:
+Run a REPL on the connected device with `repl`:
 
 ```bash
 $ npm run repl
