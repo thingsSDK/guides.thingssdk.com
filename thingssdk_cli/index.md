@@ -7,7 +7,7 @@ Projects created by thingsSDK CLI are set up to use the Espruino JavaScript runt
 ## Installation
 
 ```bash
-$ npm install thingsSDK/thingssdk-cli
+$ npm install thingsSDK/thingssdk-cli -g
 ```
 
 **TODO: Use correct package name on release!
