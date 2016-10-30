@@ -29,7 +29,11 @@ Using the right kind and number of resistors is important to having a stable cir
 Run the resistor from the boards ground `(-)` to the negative (short) leg of the LED. It doesn't matter which direction you face the bands. Resistors are not directional.
 
 ### Power
-Finally, run a wire from the positive leg of your LED to pin D1. You can see it on the chart above, or use this one for reference. [![Pin Mapping for Feather Huzzah](https://www.evernote.com/l/Ae-o5j4YXJZKmpSg6OGCj3HmXgKmxIUlbKsB/image.png)](http://www.espruino.com/EspruinoESP8266) We're all wired up! Now we can write some code!
+Finally, run a wire from the positive leg of your LED to pin D1. You can see it on the chart above, or use this one for reference. [![Pin Mapping for Feather Huzzah](https://www.evernote.com/l/Ae-o5j4YXJZKmpSg6OGCj3HmXgKmxIUlbKsB/image.png)](http://www.espruino.com/EspruinoESP8266) 
+
+Another good resource on the specific nature of each pin lives [over here at adafruit](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts/#gpio-pins). 
+
+We're all wired up! Now we can write some code!
 
 <h2 id="the-code">The Code</h2>
 ### New ThingsSDK Project
