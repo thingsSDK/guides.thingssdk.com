@@ -1,6 +1,6 @@
 # Using an LED
 
-TL;DR : [the final code](#final-code)
+TL;DR - [jump to the final code](#final-code).
 
 In this chapter we'll cover the basics of using an LED light! You've already used the onboard LED of your device in [Hello World](https://guides.thingssdk.com/examples/hello_world.html), and the basic principles are the same. Indeed! The basic principles of most Things development are represented here: properly route power from the device to the peripherals, then write code that cuts or sends the power as you like. Wiring LED's demonstrates most of the basic workflow of any things project. We'll break this into two parts: [the wires](#the-wires) and [the code](#the-code).
 
