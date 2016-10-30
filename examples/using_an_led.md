@@ -24,7 +24,7 @@ It's a good idea to start a project by grounding your board. Look for a pin labe
 I like to leave as much space as possible on my board. The long leg of your LED is the positive side.
 
 ### Resistor
-Using the right kind and number of resistors is important to having a stable circuit. Learn more about reading resistor bands here. It might be frustrating at first. The color code was developed under very different assumptions than we operate today. You'll get better at reading them the more you do it! For now, just match your resistor to the one in my picture. It should have a brown, black, red, and gold band.
+Using the right kind and number of resistors is important to having a stable circuit. [You can get a quick reference for reading resistor bands here](http://www.ladyada.net/images/metertutorial/rescolorcode.jpg). It might be frustrating at first. The color code was developed under very different assumptions than we operate today. You'll get better at reading them the more you do it! For now, just match your resistor to the one in my picture. It should have a brown, black, red, and gold band.
 
 Run the resistor from the boards ground `(-)` to the negative (short) leg of the LED. It doesn't matter which direction you face the bands. Resistors are not directional.
 
