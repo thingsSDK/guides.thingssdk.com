@@ -13,7 +13,7 @@ In this chapter we'll cover the basics of using an LED light! You've already use
 5. [1 1K resistor](https://www.adafruit.com/products/2892). This will stop things from blowing up.
 6. A micro-usb cable for transmitting code and powering the device.
 
-![Fritz Image](https://lh3.googleusercontent.com/axlWFIPC9xuESLpivnltRC_glfv98lTE1EfDovRhftb1PONt9ok6GSpmCAtLqge17HkILwXv2_bKdXQ=w2480-h1342)
+![Fritz Image](schematic_led-example.jpg)
 
 **DISCLAIMER: BE SURE TO UNPLUG AND POWER DOWN YOUR DEVICE BEFORE DOING ANY WIRING** This protects you and your equipment.
 
