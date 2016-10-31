@@ -99,7 +99,9 @@ espruino:  >echo(0);
 espruino:  D5 pin mode = input_pullup # <--- hmmmmm
 ```
 
-The console reports that `D5`'s pin mode is unsurprising. `input_pullup` is the default mode for `D5` on an ESP8266. You can read more about the difference between input and input_pulldown [on this helpful stackoverflow](http://electronics.stackexchange.com/questions/67007/whats-the-difference-between-input-and-input-pullup).
+The console reports that `D5`'s pin mode seems ok. `input_pullup` is the default mode for `D5` on an ESP8266*. 
+
+*You can read more about the difference between input and input_pulldown [on this helpful stackoverflow](http://electronics.stackexchange.com/questions/67007/whats-the-difference-between-input-and-input-pullup).
 
 Well something fishy must be happening. If we read the whole Espruino documentation, [we'd eventually find this](http://www.espruino.com/Reference#l__global_digitalWrite):
 
@@ -116,10 +118,10 @@ pinMode(D5, 'input_pullup')
 setWatch(event => console.log(`button pushed: ${ JSON.stringify(event) }`), D5, { repeat: true });
 ```
 
-Tada! Now we see our `console.log()` message every time the state of `D5`, both when the button goes up *and* down.
+Tada! Now we see our `console.log()` message *every* time the state of `D5` changes, both when the button goes up *and* down.
 
 ### Connecting the LED
-So we have this LED all plugged in and waiting for something to interact with. Let's start by specifying a pinMode for `D1`. We should move our callback out into a separate function too now that it's going to grow. Let's also turn on the light to be sure it's working on `D4`.
+So we have this LED all plugged in and waiting for something to interact with. Let's start by specifying a pinMode for `D4`. We should move our callback out into a separate function too now that it's going to grow. Let's also turn on the light to be sure it's working on `D4`.
 
 ```javascript
 pinMode(D4, 'output');
@@ -138,7 +140,7 @@ digitalWrite(D4, !isOn)
 $ npm run push
 ```
 
-Your LED should be on! Now let's flip the state of the LED every time the button is pushed. We'll read the current state of the pin and set the new state to be the opposite on every change event of `D5`.
+Your LED should be on! Now let's flip the state of the LED every time the button is pushed. We'll read the current state of the pin and set the new state to be the opposite on every button press.
 
 ```javascript
 pinMode(D4, 'output');
@@ -160,7 +162,7 @@ $ npm run push
 Cool! The light comes on and off in response to our button presses!
 
 ### Persisting the Light
-What we really want is for the light to stay on after we've released the button, and turn off again when we press the button again. The problem is that by default our `setWatch()` listener captures *all* change events. This includes the voltage coming up ("rising") and dropping off ("falling"). Remember how the button works: button down connects, button up disconnects. That means that pushing *and* releasing trigger state changes to `D5`. But we can specify that we only want to track events of either kind. Let's track only the times we push the button:
+What we really want is for the light to *stay* on after we've released the button, and turn off again when we press the button again. The problem is that by default our `setWatch()` listener captures *all* change events. This includes the voltage coming up ("rising") and dropping off ("falling"). Remember how the button works: button down connects, button up disconnects. That means that pushing *and* releasing trigger state changes to `D5`. But we can specify that we only want to track events of either kind. Let's track only the times we push the button:
 
 ```javascript
 pinMode(D4, 'output');
