@@ -1,6 +1,6 @@
 # Using an LED
 
-TL;DR : [the final code](#final-code)
+TL;DR - [jump to the final code](#final-code).
 
 In this chapter we'll cover the basics of using an LED light! You've already used the onboard LED of your device in [Hello World](https://guides.thingssdk.com/examples/hello_world.html), and the basic principles are the same. Indeed! The basic principles of most Things development are represented here: properly route power from the device to the peripherals, then write code that cuts or sends the power as you like. Wiring LED's demonstrates most of the basic workflow of any things project. We'll break this into two parts: [the wires](#the-wires) and [the code](#the-code).
 
@@ -13,12 +13,12 @@ In this chapter we'll cover the basics of using an LED light! You've already use
 5. [1 1K resistor](https://www.adafruit.com/products/2892). This will stop things from blowing up.
 6. A micro-usb cable for transmitting code and powering the device.
 
-![Fritz Image](https://lh3.googleusercontent.com/axlWFIPC9xuESLpivnltRC_glfv98lTE1EfDovRhftb1PONt9ok6GSpmCAtLqge17HkILwXv2_bKdXQ=w2480-h1342)
+![Fritz Image](schematic_led-example.jpg)
 
 **DISCLAIMER: BE SURE TO UNPLUG AND POWER DOWN YOUR DEVICE BEFORE DOING ANY WIRING** This protects you and your equipment.
 
 ### Ground
-It's a good idea to start a project by grounding your board. Look for a pin labeled "GND" on your devices.
+It's a good idea to start a project by grounding your board. Look for a pin labeled "GND" on your device. Run a wire from this pin to one of the `(-)` columns on your breadboard.
 
 ### LED
 I like to leave as much space as possible on my board. The long leg of your LED is the positive side.
@@ -29,7 +29,7 @@ Using the right kind and number of resistors is important to having a stable cir
 Run the resistor from the boards ground `(-)` to the negative (short) leg of the LED. It doesn't matter which direction you face the bands. Resistors are not directional.
 
 ### Power
-Finally, run a wire from the positive leg of your LED to pin D1. You can see it on the chart above, or use this one for reference. [![Pin Mapping for Feather Huzzah](https://www.evernote.com/l/Ae-o5j4YXJZKmpSg6OGCj3HmXgKmxIUlbKsB/image.png)](http://www.espruino.com/EspruinoESP8266) 
+Finally, run a wire from the positive leg of your LED to pin `D1`. You can see it on the chart above, or use this one for reference. [![Pin Mapping for Feather Huzzah](https://www.evernote.com/l/Ae-o5j4YXJZKmpSg6OGCj3HmXgKmxIUlbKsB/image.png)](http://www.espruino.com/EspruinoESP8266) 
 
 Another good resource on the specific nature of each pin lives [over here at adafruit](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts/#gpio-pins). 
 
@@ -105,7 +105,7 @@ Here're some suggestions for where to begin.
 3. Depending what board you're using, and what pins you're manipulating, you might need to manually set their mode using [`pinMode()`](http://www.espruino.com/Reference#l__global_pinMode).
 
 ### Further Exercises
-1. Try using a different port. Try every port on the board and see if you get different results!  
+1. Try using a different pin. Try every pin on the board and see if you get different results!  
 2. Try adding a second LED. Make sure to add a resistor, too.  
 3. Try making a mini light show using several different colored lights that blink at different intervals.  
 4. Try setting the intervals to your favorite song!
