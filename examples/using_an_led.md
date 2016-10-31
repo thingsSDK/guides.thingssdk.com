@@ -29,9 +29,9 @@ Using the right kind and number of resistors is important to having a stable cir
 Run the resistor from the boards ground `(-)` to the negative (short) leg of the LED. It doesn't matter which direction you face the bands. Resistors are not directional.
 
 ### Power
-Finally, run a wire from the positive leg of your LED to pin `D1`. You can see it on the chart above, or use this one for reference. [![Pin Mapping for Feather Huzzah](https://www.evernote.com/l/Ae-o5j4YXJZKmpSg6OGCj3HmXgKmxIUlbKsB/image.png)](http://www.espruino.com/EspruinoESP8266) 
+Finally, run a wire from the positive leg of your LED to pin `D4`. You can see it on the chart above, or use this one for reference. [![Pin Mapping for Feather Huzzah](https://www.evernote.com/l/Ae-o5j4YXJZKmpSg6OGCj3HmXgKmxIUlbKsB/image.png)](http://www.espruino.com/EspruinoESP8266)
 
-Another good resource on the specific nature of each pin lives [over here at adafruit](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts/#gpio-pins). 
+Another good resource on the specific nature of each pin lives [over here at adafruit](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/pinouts/#gpio-pins).
 
 We're all wired up! Now we can write some code!
 
@@ -71,7 +71,7 @@ $ npm run push
 ### Light the LED
 Technically you've already lit an LED! It might even be blinking right now, using the hello world default code! In `./main.js`, `digitalWrite()` changes the state of pin `D2`, which on the ESP8266 is its onboard LED.
 
-We want to power our peripheral LED bulb instead. So we need to change the state of the pin we're expecting it to draw power from: `D1`.
+We want to power our peripheral LED bulb instead. So we need to change the state of the pin we're expecting it to draw power from: `D4`.
 
 ```javascript
 // ./main.js
@@ -80,7 +80,7 @@ const interval = 500;
 
 setInterval(() => {
     isOn = !isOn;
-    digitalWrite(D1, isOn); // Changed D2 to D1
+    digitalWrite(D4, isOn); // Changed D2 to D4
 }, interval);
 ```
 
@@ -97,7 +97,7 @@ Here're some suggestions for where to begin.
 1. Unplug the device, wait a second, and plug it back in. Try again. Seriously, this is your life now.  
 2. Ensure all the wires are properly connected and that they have a good  attachment to the breadboard. Jiggle them around a little to make sure. This is your life now.  
 3. Try swapping some of the parts out for identical parts. Start with the easiest ones and keep on going until you've tried them all. Sometimes the a bulb can be dead on arrival, or wires can fray internally or be broken. Sometimes a breadboard may get old and have trouble carrying a charge. THIS IS YOUR LIFE NOW!  
-4. Try a different pin. This is kind of a hybird between hardware and software, since you'll need to update your code to reflect the change. For example, if you switch the wire connecting the Feather to the LED from D1 to D3, you'll need to change `digitalWrite(D1, isOn);` to `digitalWrite(D3, isOn);`
+4. Try a different pin. This is kind of a hybrid between hardware and software, since you'll need to update your code to reflect the change. For example, if you switch the wire connecting the Feather to the LED from D4 to D3, you'll need to change `digitalWrite(D4, isOn);` to `digitalWrite(D3, isOn);`
 
 #### Software
 1. Check the contents of the './build' directory to see what ThingsSDK is compiling. Does anything look super weird in there? Is any of the code you wrote missing? This might guide you toward the problem in your source code in `./main.js`. **If you do find a problem and you can reproduce it, [file an issue on Github]()** 🙇🏻  
@@ -117,6 +117,6 @@ const interval = 500;
 
 setInterval(() => {
     isOn = !isOn;
-    digitalWrite(D1, isOn); // Changed D2 to D1
+    digitalWrite(D4, isOn); // Changed D2 to D4
 }, interval);
 ```
