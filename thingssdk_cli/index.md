@@ -1,4 +1,5 @@
-# thingsSDK CLI
+
+```# thingsSDK CLI
 
 __thingsSDK CLI__ is a tool to help professional JavaScript developers build IoT projects in a familiar way.
 
@@ -27,13 +28,21 @@ Changing in to the project directory, and install the libraries:
 $ npm install
 ```
 
-You'll have access to the following scripts `push` and `repl`.
+You'll have access to the following scripts `dev`, `deploy` and `repl`.
 
-Deploy your project to device with `push`:
+To push your project to device in development use the `dev` command:
 
 ```bash
-$ npm run push
+$ npm run dev
 ```
+
+In development the code isn't saved to the device. It allows you to debug and test your code before commiting to it. Once you're happy with your code you can use the `deploy` command:
+
+```bash
+$ npm run deploy
+```
+
+Deploying means you code is saved and will be available when the device reboots.
 
 Run a REPL on the connected device with `repl`:
 
