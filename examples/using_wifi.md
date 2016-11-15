@@ -101,7 +101,7 @@ That buys us at least two things.
 1. We are now notified in the repl when the device first starts its connection attempt.  
 2. We get a Promise back that we can chain from and pass around as arguments to other functions. This gives us a lot more freedom over when our code runs and how it's written.  
 
-Before we `npm run push` again, we need to call our new function.
+Before we `npm run dev` again, we need to call our new function.
 ```javascript
 // main.js
 ...
@@ -114,7 +114,7 @@ connect(WIFI_NAME, { password: WIFI_PASSWORD })
 
 Since we `resolve()`'d our Promise in `connect` with `ipAddress` as its value, we have access to that inside our `then()` block. There are other properties you might be interested in accessing, but for our purposes here we don't really care. We only want to confirm that we connected successfully so we can forget about and do our cool internet stuff.
 
-`$ npm run push` should show something like this toward the end of the terminal output.
+`$ npm run dev` should show something like this toward the end of the terminal output.
 
 ```bash
 successfully connected to 192.168.1.131
