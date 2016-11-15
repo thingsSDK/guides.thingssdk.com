@@ -137,7 +137,7 @@ digitalWrite(D4, !isOn)
 ```
 
 ```bash
-$ npm run push
+$ npm run dev
 ```
 
 Your LED should be on! Now let's flip the state of the LED every time the button is pushed. We'll read the current state of the pin and set the new state to be the opposite on every button press.
@@ -156,7 +156,7 @@ setWatch(flipLight, D5, { repeat: true });
 ```
 
 ```bash
-$ npm run push
+$ npm run dev
 ```
 
 Cool! The light comes on and off in response to our button presses!
@@ -178,7 +178,7 @@ setWatch(flipLight, D5, { repeat: true, edge: 'falling' });
 ```
 
 ```bash
-$ npm run push
+$ npm run dev
 ```
 
 Now the button press should *mostly* turn the LED on and off.
