@@ -34,7 +34,6 @@ $ npm install
 ```
 
 ## Hello World
-
 Each thingsSDK project starts as with the Hello World code. All thingsSDK applications require a `main()` function to be implemented. The Hello World application blinks the blue LED on the device. It blinks every half a second.
 
 ```javascript
@@ -44,7 +43,7 @@ const interval = 500; // 500 milliseconds = 0.5 seconds
 /**
  * The `main` function gets executed when the board is initialized.
  * Development: npm run dev
- * Production: npm run deploy
+n * Production: npm run deploy
  */
 function main() {
     setInterval(() => {
@@ -88,6 +87,6 @@ $ npm run repl
 
 If you're cloning the project on another machine or working as a team you'll want to generate a `devices.json` machine for the new environment using the thingsSDK `devices` command.
 
-```
+```bash
 $ thingssdk devices
 ```
