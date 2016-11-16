@@ -52,4 +52,4 @@ $ npm run repl
 
 ## Guides
 
-* [Getting Started](./getting_strated.md)
+* [Getting Started](./getting_started.md)
