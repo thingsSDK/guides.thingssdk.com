@@ -2,18 +2,18 @@
 
 thingsSDK CLI is a command line application to manage Internet of Things applications written in JavaScript.
 
-## Prerequisites 
+## Prerequisites
 
 You will need an ESP8266 development board flashed with the Espruino JavaScript runtime ([see the Flasher.js guides](../flasher.js/index.md)). You can think of Espruino as the Node.js of microcontrollers.
 
-## Installation 
+## Installation
 
 Install `thingssdk-cli` with npm globally.
 
  ```bash
  $ npm install thingssdk-cli -g
  ```
- 
+
 ## Create a Project
 
 To create a thingsSDK project use the `new` command followed by the project name. Replace `<project>` in the following command with a project name.
@@ -33,8 +33,30 @@ Then install the dependencies.`
 $ npm install
 ```
 
+## Basic project structure
+
+The `new` command will generate a bunch of helpful files for you:
+
+```bash
+├── build
+├── devices.json
+├── main.js
+├── package.json
+└── scripts
+    ├── repl.js
+    └── upload.js
+```
+
+Here is a general overview of each major part:
+
+`build/` is where your compiled javascript will go. Git ignores this folder.
+`devices.json` contains the configuration for device(s).
+`main.js` is the main file of your project
+`scrips/repl.js` is a script to start a repl, a very helpful tool for debugging.
+`scrips/upload.js` is a script upload your project to the configured device(s).
+
 ## Hello World
-Each thingsSDK project starts as with the Hello World code. All thingsSDK applications require a `main()` function to be implemented. The Hello World application blinks the blue LED on the device. It blinks every half a second.
+Each thingsSDK project starts as with the Hello World code - located in `main.js`. All thingsSDK applications require a `main()` function to be implemented. The Hello World application blinks the blue LED on the device. It blinks every half a second.
 
 ```javascript
 let isOn = false;
