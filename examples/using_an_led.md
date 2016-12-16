@@ -2,7 +2,7 @@
 
 TL;DR - [jump to the final code](#final-code).
 
-In this chapter we'll cover the basics of using an LED light! You've already used the onboard LED of your device in [Hello World](https://guides.thingssdk.com/examples/hello_world.html), and the basic principles are the same. Indeed! The basic principles of most Things development are represented here: properly route power from the device to the peripherals, then write code that cuts or sends the power as you like. Wiring LED's demonstrates most of the basic workflow of any things project. We'll break this into two parts: [the wires](#the-wires) and [the code](#the-code).
+In this chapter we'll cover the basics of using an LED light! You've already used the onboard LED of your device in [Hello World](https://guides.thingssdk.com/examples/hello_world.html), and the basic principles are the same. Indeed! The basic principles of most Things development are represented here: properly route power from the device to the peripherals, then write code that cuts or sends the power as you like. Wiring LEDs demonstrates most of the basic workflow of any Things project. We'll break this into two parts: [the wires](#the-wires) and [the code](#the-code).
 
 <h2 id="the-wires">The Wires</h2>
 ### Materials
@@ -52,7 +52,7 @@ thingssdk new LED_Example
 To install the project dependencies:
     cd LED_Example && npm install
 To upload to your device:
-    cd LED_Example && npm run push
+    cd LED_Example && npm run deploy
 Project successfully created
 ```
 
@@ -62,10 +62,10 @@ Follow the prompts to get our dependencies installed:
 $ cd LED_Example && npm install
 ```
 
-When everything is installed, `$ npm run push` sends the code to your device and run it. I like to perform a quick sanity check with the default hello world code just to make sure everything is correctly connected.
+When everything is installed, `$ npm run dev` sends the code to your device and runs it. I like to perform a quick sanity check with the default hello world code just to make sure everything is correctly connected.
 
 ```bash
-$ npm run push
+$ npm run dev
 ```
 
 ### Light the LED
@@ -89,7 +89,7 @@ You're done! [`digitalWrite()`](http://www.espruino.com/Reference#l__global_digi
 This is the fundamental workflow of all Things projects, no matter how large or complex. Plug stuff in to pins on the board. Switch power to the pins on and off depending on certain conditions. The rest of this book will show how to get different components to interact in interesting ways.
 
 ### Troubleshooting
-If you're light isn't blinking, you might be in for a treat! In Things development there are additional points of failure compared with web development. On top of all our code, there're all the wires and mechanical devices. Just like web development, it's important to test only one hypothesis at a time while debugging. Don't switch the LED *and* the pin at the same time before trying again. This will help you systematically rule out possible problems, and empower you to get help from others if needed.
+If your light isn't blinking, you might be in for a treat! In Things development there are additional points of failure compared with web development. On top of all our code, there're all the wires and mechanical devices. Just like web development, it's important to test only one hypothesis at a time while debugging. Don't switch the LED *and* the pin at the same time before trying again. This will help you systematically rule out possible problems, and empower you to get help from others if needed.
 
 Here're some suggestions for where to begin.
 
