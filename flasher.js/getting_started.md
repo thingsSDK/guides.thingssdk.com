@@ -10,9 +10,9 @@ Let's go!
 
 ## Step 1: Download and Install Flasher.js
 
-First things first: head over to the [Flasher.js releases page](https://github.com/thingsSDK/flasher.js/releases) and download the latest version. We have lots of options for you - you can run Flasher.js on Linux, Mac, and Windows (both 34bit and 64bit). You can even compile the source yourself if you're feeling brave. 
+First things first: head over to the [Flasher.js releases page](https://github.com/thingsSDK/flasher.js/releases) and download the latest version. We have lots of options for you - you can run Flasher.js on Linux, Mac, and Windows (both 32bit and 64bit). You can even compile the source yourself if you're feeling brave. 
 
-On Windows, you'll be downloading the binary directly, so you can just move it where you'd like it. On a Mac, you'll be downloading a disk image (.dmg) file. Double-click it and drag it over to your Applications folder. If you're on Linux you'll be downloading a Debian package (.deb). Double-click it to install.
+On Windows, you'll be downloading the binary directly, so you can just move it where you'd like it. On a Mac, you'll be downloading a disk image (.dmg) file. Double-click it and drag the Flasher.js icon over to your Applications folder. If you're on Linux, you'll be downloading a Debian package (.deb). Double-click it to install.
 
 ## Step 2: Install Drivers (if required)
 
@@ -24,10 +24,10 @@ On to the fun part! Plug in your device, then double-click on your freshly insta
 
 ![Flasher.js](./img/flasher.jpg)
 
-Flasher.js will attempt to auto-select the port for you, but you can double check it. On Windows, these are going to look like "COM3," while on Mac and Linux they will be more like "/dev/ttyUSB1" or "/dev/cu.usbmodem150".
+Flasher.js will attempt to auto-select the port for you, but you can double check it. On Windows, these are going to look like `COM3`, while on Mac and Linux they will be more like `/dev/ttyUSB1` or `/dev/cu.usbmodem150`.
 
-Next, pick which runtime you want to flash on your device. We've got multiple versions of [Espruino](https://www.espruino.com/), as well as [Mongoose OS](https://mongoose-iot.com/) (formerly Smart.js), [thingSwitch](https://www.eclipse.org/smarthome/documentation/javadoc/org/eclipse/smarthome/model/thing/thing/util/ThingSwitch.html), and even [MicroPython](https://micropython.org/)! If you're not sure, and you just want to get going on some of the tutorials you've seen elsewhere on thingsSDK, just pick the latest version of Espruino.
+Next, pick which runtime you want to flash on your device. We've got multiple versions of [Espruino](https://www.espruino.com/), as well as [Mongoose OS](https://mongoose-iot.com/) (formerly Smart.js), [thingsSwitch](https://github.com/thingsSDK/thingsSwitch) (our tool for talking to the Amazon Echo), and even [MicroPython](https://micropython.org/)! If you're not sure, and you just want to get going on some of the tutorials you've seen elsewhere on thingsSDK, just pick the latest version of Espruino.
 
-And now - the moment you've been waiting for - click the Flash! button. Flasher.js will go download the appropriate binary for you, prepare it, and flash your device - all in one step!
+And now - the moment you've been waiting for - click the Flash! button. Flasher.js will go download the appropriate binary for you, prepare it, and flash your device - all in one step! On most devices, you should see an LED blinking during the flashing process. This should only take a few minutes, and a notification will pop up indicating that flashing is done. 
 
-You're all set to start on the rest of the thingsSDK toolchain and build your project.
+That's it! You're all set to start on the rest of the thingsSDK toolchain and build your project.
