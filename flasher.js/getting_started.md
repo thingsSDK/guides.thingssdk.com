@@ -16,13 +16,13 @@ On Windows, you'll be downloading the binary directly, so you can just move it w
 
 ## Step 2: Install Drivers (if required)
 
-Before you open up Flasher.js, you may need to install some drivers for your board. Luckily, we've put together a little table with the related links for you on our [Compatible Devices](compatible-devices.md) page. Go ahead and go check it out and install the drivers if you need them. We'll be here when you get back!
+Before you open up Flasher.js, you may need to install some drivers for your board. Luckily, we've put together a little table with the related links for you on our [Compatible Devices](./compatible-devices.md) page. Go ahead and go check it out and install the drivers if you need them. We'll be here when you get back!
 
 ## Step 3: Flash Your Device
 
 Onto the fun part! Plug in your device, then double-click on your freshly installed Flasher.js binary. You'll see a screen like this (with slight differences for your OS):
 
-![Flasher.js](/img/flasher.jpg)
+![Flasher.js](./img/flasher.jpg)
 
 Flasher.js will attempt to auto-select the port for you, but you can double check it. On Windows, these are going to look like "COM3", while on Mac and Linux they will be more like "/dev/ttyUSB1" or "/dev/cu.usbmodem150".
 
