@@ -20,13 +20,13 @@ Before you open up Flasher.js, you may need to install some drivers for your boa
 
 ## Step 3: Flash Your Device
 
-Onto the fun part! Plug in your device, then double-click on your freshly installed Flasher.js binary. You'll see a screen like this (with slight differences for your OS):
+On to the fun part! Plug in your device, then double-click on your freshly installed Flasher.js binary. You'll see a screen like this (with slight differences for your OS):
 
 ![Flasher.js](./img/flasher.jpg)
 
-Flasher.js will attempt to auto-select the port for you, but you can double check it. On Windows, these are going to look like "COM3", while on Mac and Linux they will be more like "/dev/ttyUSB1" or "/dev/cu.usbmodem150".
+Flasher.js will attempt to auto-select the port for you, but you can double check it. On Windows, these are going to look like "COM3," while on Mac and Linux they will be more like "/dev/ttyUSB1" or "/dev/cu.usbmodem150".
 
-Next, pick what runtime you want to flash on your device. We've got multiple versions of [Espruino](https://www.espruino.com/), as well as [Mongoose OS](https://mongoose-iot.com/) (formerly Smart.js), [thingSwitch](https://www.eclipse.org/smarthome/documentation/javadoc/org/eclipse/smarthome/model/thing/thing/util/ThingSwitch.html), and even [MicroPython](https://micropython.org/)! If you're not sure, and you just want to get going on some of the tutorials you've seen elsewhere on thingsSDK, just pick the latest version of Espruino.
+Next, pick which runtime you want to flash on your device. We've got multiple versions of [Espruino](https://www.espruino.com/), as well as [Mongoose OS](https://mongoose-iot.com/) (formerly Smart.js), [thingSwitch](https://www.eclipse.org/smarthome/documentation/javadoc/org/eclipse/smarthome/model/thing/thing/util/ThingSwitch.html), and even [MicroPython](https://micropython.org/)! If you're not sure, and you just want to get going on some of the tutorials you've seen elsewhere on thingsSDK, just pick the latest version of Espruino.
 
 And now - the moment you've been waiting for - click the Flash! button. Flasher.js will go download the appropriate binary for you, prepare it, and flash your device - all in one step!
 
