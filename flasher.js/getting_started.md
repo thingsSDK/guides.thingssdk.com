@@ -12,7 +12,7 @@ Let's go!
 
 First things first: head over to the [Flasher.js releases page](https://github.com/thingsSDK/flasher.js/releases) and download the latest version. We have lots of options for you - you can run Flasher.js on Linux, Mac, and Windows (both 32bit and 64bit). You can even compile the source yourself if you're feeling brave. 
 
-On Windows, you'll be downloading the binary directly, so you can just move it where you'd like it. On a Mac, you'll be downloading a disk image (.dmg) file. Double-click it and drag the Flasher.js icon over to your Applications folder. If you're on Linux, you'll be downloading a Debian package (.deb). Double-click it to install.
+On Windows, you'll be downloading an installer, once it's downloaded, open it and it'll install in your Start Menu. On a Mac, you'll be downloading a disk image (.dmg) file. Double-click it and drag the Flasher.js icon over to your Applications folder. If you're on Linux, you'll be downloading a Debian package (.deb). Double-click it to install.
 
 ## Step 2: Install Drivers (if required)
 
