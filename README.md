@@ -1,6 +1,6 @@
 # Introduction to thingsSDK
 
-__thingsSDK__ is a set tools for web developers to create internet-enabled hardware projects. 
+__thingsSDK__ is a set of tools for web developers to create internet-enabled hardware projects. 
 
 thingsSDK reduces the friction to start a project by providing tools such as:
 
