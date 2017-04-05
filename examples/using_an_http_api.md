@@ -6,9 +6,6 @@ In this chapter we'll cover the basics of making an HTTP request to an API.
 
 For this example, we don't need any wiring, as we will use the REPL interactive console to display the data from the API. 
 
-Let's go to write some code!
-
-
 ## Setup
 ### New ThingsSDK Project
 The first step is start a new Things project. Plug your device into your desired USB port. Then in your terminal run:
@@ -42,7 +39,7 @@ When everything is installed, `$ npm run dev` sends the code to your device and 
 $ npm run dev
 ```
 
-##The Code
+## The Code
 ### Connect to WIFI
 There is an [entire chapter of this guide](https://guides.thingssdk.com/examples/using_wifi.html) dedicated to how to connect to a WIFI network.
 
