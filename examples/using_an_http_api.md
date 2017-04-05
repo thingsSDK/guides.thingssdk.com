@@ -9,7 +9,7 @@ For this example, we don't need any wiring, as we will use the REPL interactive 
 Let's go to write some code!
 
 
-<h2 id="the-code">The Code</h2>
+## Setup
 ### New ThingsSDK Project
 The first step is start a new Things project. Plug your device into your desired USB port. Then in your terminal run:
 ```bash
@@ -42,6 +42,7 @@ When everything is installed, `$ npm run dev` sends the code to your device and 
 $ npm run dev
 ```
 
+##The Code
 ### Connect to WIFI
 There is an [entire chapter of this guide](https://guides.thingssdk.com/examples/using_wifi.html) dedicated to how to connect to a WIFI network.
 
@@ -96,7 +97,7 @@ const handleRequest=(req, res) => {
 }
 ```
 
-This will return a "Hello World!".
+This will return "Hello World!".
 
 ### Handle different methods
 Let's create a simple form that will send the name of the user to another page. We need to differentiate between the GET request (where we will display the form) and the POST request (where we will get the user name and show it on a different page.
