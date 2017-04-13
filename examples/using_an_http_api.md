@@ -1,7 +1,5 @@
 # Using an HTTP API
 
-TL;DR - [jump to the final code](#final-code).
-
 In this chapter we'll cover the basics of making an HTTP request to an API.
 
 For this example, we don't need any wiring, as we will use the REPL interactive console to display the data from the API. 
@@ -62,138 +60,76 @@ wifi.connect(WIFI_NAME, { password: WIFI_PASSWORD }, error => {
 })
 ```
 
-### Create the web server
-Ok, now we are connected to Internet, let's begin to write the real code!
-To create a new server, we need to use the **http** library. 
+### Make a GET Request
+
+Making a request is really easy: here we will use the Yahoo Weather APIs to get the current condition in Dallas, TX. (I'm using one of the examples in the Yahoo APIs Documentation: https://developer.yahoo.com/weather/).
 
 
 ```javascript
-let handleRequest=((req,res)=>{
-	console.log("Somebody is connected!");
+
+const url="https://query.yahooapis.com/v1/public/yql?q=select%20item.condition.text%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22dallas%2C%20tx%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+
+require("http").get(url, function(res) {
+    let c = "";
+    res.on('data', function(data) {
+      c += data;
+    });
+    res.on('close', function(data) {
+      let content=JSON.parse(c)
+      console.log("The weather in Dallas is... "+content.results.channel.item.condition.text);
+    });
+  });
+  
+
+```
+
+As you can see, we are using the `http` module to make our request. The `get` function requires 2 params: the URL and a function to handle the response. 
+
+#### Handle the response
+The `response` object can emit 2 events: `data` and `close`. 
+
+The `data` event is called when a chunk of information is sent from the server to the client. If the response is small, it could be all inside a single chunk, but don't rely on it. The best way is to concatenate the chunk inside a String variable (here `c`)
+
+The `close` event is called when there are no more chunks left: know it's save to read the full response (stored in the `c` variable in this example).
+
+
+### Make a POST/PUT/DELETE Requests
+For other methods different than GET, we can use the `request` method. 
+
+
+```javascript
+
+let options={
+	host: 'example.com', 	// change this
+	port: 80,            	// (optional) port, defaults to 80
+	path: '/example_path',	// path sent to server
+	method: 'POST',       	// HTTP command sent to server (must be uppercase 'GET', 'POST', etc)
+	headers: { key : value, key : value } // (optional) HTTP headers
+}
+
+let data=JSON.stringify({
+	a:5 //data to send in POST request
 })
-require("http").createServer(handleRequest).listen(80);
-console.log(`I'm ready on ${ wifi.getIP().ip }:80`);
+
+require("http").request(options, function(res) {
+    let c = "";
+    res.on('data', function(data) {
+      c += data;
+    });
+    res.on('close', function(data) {
+      let content=JSON.parse(c)
+      console.log("The server responded:", content)
+    });
+  }).end(data);
+  
 ```
 
-This will permit the Espruino to listen to port 80 on his assigned IP address (we are using wifi.getIP() to know the IP address).
+As you can see, the `request` method is pretty similar to `get` method, except you use a options object inside of the string url as first paramether and then you add a `.end(data)` to start the request with the POST/PUT/PATCH data to send to the server. 
 
-### Build a response
-Right now we don't serve a response, so the client will try to load the website forever. 
-The handleRequest function has 2 object params pretty similar to any node.js server, **Request** and **Response**. **Request** contains the URL, the method used, and the paramethers sent to it, while the **Response** permits to serve data to the client. 
-For example, if we want to return a simple HTML page, we should do something like this:
-
-```javascript
-const handleRequest=(req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end(`<html>
-  		<head>Test Page</head>
-  		<body>
-  			<h1>Hello World!</h1>
-  		</body>	
-  	</html>`);
-}
-```
-
-This will return "Hello World!".
-
-### Handle different methods
-Let's create a simple form that will send the name of the user to another page. We need to differentiate between the GET request (where we will display the form) and the POST request (where we will get the user name and show it on a different page.
-
-```javascript
-const handleRequest=(req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  if(req.method=="GET"){
-	  res.end(`<html>
-	  	 <head>Test Page</head>
-	  	 <body>
-	  	   <h1>Write your name here:</h1>
-	  		<form method="POST" action="/">
-		  	  <input type="text" name="name_user">
-	  	     <input type="submit" value="Send">
-	  	   </form>
-	  	 </body>	
-	  </html>`); 	
-  }else{
-	  let params=parseRequestData(req.read());
-  	  let name=obj.name_user;
-   	  res.end(`<html>
-  		<head>Test Page</head>
-  		<body>
-  		  <h1>Hello, ${name}</h1>
-  		</body>	
-	  </html>`); 	
-  }
-}
-
-//function to return an object with all request paramethers 
-const parseRequestData =(str)=>{
-  return str.split("&").reduce(function(prev, curr, i, arr) {
-    var p = curr.split("=");
-    prev[decodeURIComponent(p[0])] = decodeURIComponent(p[1]);
-    return prev;
-  }, {});
-}
-
-```
+N.B.: You can also call a GET URL with `request`, just use `method:"GET"` and `.end({})`. 
 
 
-### Keep the HTML/CSS/JS slim!
-Remember: you have a limited amount of memory on Espruino. Everytime you add new fancy CSS attributes or lots of JS functions, you are using memory and this can drive to a **Out Of Memory!** error.
-Be sure to put some **print(process.memory());** inside your code to monitor the amount of free memory still available.
+### HTTPS
 
-
-## Final Code
-```javascript
-const wifi = require('Wifi')
-const WIFI_NAME= "...";
-const WIFI_PASSWORD= "...";
-
-function main(){
-  // wifi.connect(ssid, options object, callback)
-  wifi.connect(WIFI_NAME, { password: WIFI_PASSWORD }, error => {
-    if (error){
-     console.error(error)
-    }else{
-  	  console.log(`Connected to: ${ wifi.getIP().ip }`)
-  	  require("http").createServer(handleRequest).listen(80);
-    }
-  })
-}
-
-const handleRequest= (req, res) =>{
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  if(req.method=="GET"){
-	  res.end(`<html>
-	  	 <head>Test Page</head>
-	  	 <body>
-	  	   <h1>Write your name here:</h1>
-	  		<form method="POST" action="/">
-		  	  <input type="text" name="name_user">
-	  	     <input type="submit" value="Send">
-	  	   </form>
-	  	 </body>	
-	  </html>`); 	
-  }else{
-	  let params=parseRequestData(req.read());
-  	  let name=obj.name_user;
-   	  res.end(`<html>
-  		<head>Test Page</head>
-  		<body>
-  		  <h1>Hello, ${name}</h1>
-  		</body>	
-	  </html>`); 	
-  }
-}
-
-//function to return an object with all request paramethers 
-const parseRequestData = (str) =>{
-  return str.split("&").reduce(function(prev, curr, i, arr) {
-    var p = curr.split("=");
-    prev[decodeURIComponent(p[0])] = decodeURIComponent(p[1]);
-    return prev;
-  }, {});
-}
-
-
-```
+Unfortunately as today (13 April 2017), the HTTPS is supported only on Espruino Pico and WiFi. 
 
